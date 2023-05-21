@@ -1,0 +1,483 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6512390668278154586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6151768321977218292}
+  - component: {fileID: 6632116242765475675}
+  - component: {fileID: 4113492788654245991}
+  - component: {fileID: 2975939149608010278}
+  - component: {fileID: 2625626441822810255}
+  - component: {fileID: 4467295862557634816}
+  - component: {fileID: 3913593669248549435}
+  m_Layer: 9
+  m_Name: Player3
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6151768321977218292
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512390668278154586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1049781575306417018}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &6632116242765475675
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512390668278154586}
+  serializedVersion: 2
+  m_Mass: 3
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &4113492788654245991
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512390668278154586}
+  m_Material: {fileID: 13400000, guid: c3496fc1bd7a3d140810de56cc293ce6, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.85, z: 0}
+--- !u!114 &2975939149608010278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512390668278154586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b992969939f9e1c4992a48257d73fd16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+--- !u!114 &2625626441822810255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512390668278154586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b93609eb4825f64cb89f74fdc2f8df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHp: 20
+  CurrentHp: 20
+  invulnerable: 0
+  HUDPortrait: {fileID: 21300000, guid: c2543cf0eb548594fb03bb2f1e4f3ecd, type: 3}
+  PlayerName: Nathan
+--- !u!114 &4467295862557634816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512390668278154586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c817bdf7a91804abe62ab16fc98fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 3
+  runSpeed: 6
+  ZSpeed: 4.5
+  JumpForce: 8
+  AllowDepthJumping: 0
+  AirAcceleration: 8
+  AirMaxSpeed: 3
+  rotationSpeed: 10
+  jumpRotationSpeed: 8
+  lookAheadDistance: 0.4
+  landRecoveryTime: 0.1
+  landTime: 0
+  CollisionLayer:
+    serializedVersion: 2
+    m_Bits: 65536
+  jumpUpVoice: PlayerJump
+  jumpLandVoice: PlayerLand
+  currentDirection: -1
+  inputDirection: {x: 0, y: 0}
+  jumpInProgress: 0
+--- !u!114 &3913593669248549435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512390668278154586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a95774a56fa5824b80a4096a75a37fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponBone: {fileID: 9159841364745617130}
+  hitZRange: 2.2
+  PunchCombo:
+  - animTrigger: Punch1
+    damage: 1
+    duration: 0.22
+    comboResetTime: 0.35
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: DefaultHit
+    knockDown: 0
+    slowMotionEffect: 0
+    DefenceOverride: 0
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1
+    collDistance: 0.76
+    collHeight: 1.17
+    hitTime: 0
+    inflictor: {fileID: 0}
+  - animTrigger: Punch2
+    damage: 2
+    duration: 0.3
+    comboResetTime: 0.35
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: DefaultHit
+    knockDown: 0
+    slowMotionEffect: 0
+    DefenceOverride: 0
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1
+    collDistance: 0.76
+    collHeight: 1.17
+    hitTime: 0
+    inflictor: {fileID: 0}
+  - animTrigger: Punch3
+    damage: 3
+    duration: 0.5
+    comboResetTime: 1
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: HeavyHit
+    knockDown: 1
+    slowMotionEffect: 0
+    DefenceOverride: 0
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1
+    collDistance: 0.76
+    collHeight: 1.17
+    hitTime: 0
+    inflictor: {fileID: 0}
+  KickCombo:
+  - animTrigger: Kick1
+    damage: 2
+    duration: 0.45
+    comboResetTime: 0.35
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: DefaultHit
+    knockDown: 0
+    slowMotionEffect: 0
+    DefenceOverride: 0
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1
+    collDistance: 0.95
+    collHeight: 1.1
+    hitTime: 0
+    inflictor: {fileID: 0}
+  - animTrigger: Kick2
+    damage: 3
+    duration: 0.45
+    comboResetTime: 0.35
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: HeavyHit
+    knockDown: 1
+    slowMotionEffect: 1
+    DefenceOverride: 0
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1
+    collDistance: 0.96
+    collHeight: 1.15
+    hitTime: 0
+    inflictor: {fileID: 0}
+  JumpKickData:
+    animTrigger: JumpKick
+    damage: 3
+    duration: 1
+    comboResetTime: 0
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: DefaultHit
+    knockDown: 1
+    slowMotionEffect: 1
+    DefenceOverride: 1
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1.2
+    collDistance: 0.58
+    collHeight: 1.2
+    hitTime: 0
+    inflictor: {fileID: 0}
+  GroundPunchData:
+    animTrigger: GroundPunch
+    damage: 2
+    duration: 0.68
+    comboResetTime: 0
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: GroundPunchHit
+    knockDown: 0
+    slowMotionEffect: 0
+    DefenceOverride: 0
+    isGroundAttack: 1
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1.1
+    collDistance: 0.73
+    collHeight: 0.2
+    hitTime: 0
+    inflictor: {fileID: 0}
+  GroundKickData:
+    animTrigger: GroundKick
+    damage: 2
+    duration: 1.1
+    comboResetTime: 0
+    forwardForce: 0
+    knockBackForce: 0
+    hitSFX: GroundPunchHit
+    knockDown: 0
+    slowMotionEffect: 0
+    DefenceOverride: 0
+    isGroundAttack: 1
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1.1
+    collDistance: 0.73
+    collHeight: 0.2
+    hitTime: 0
+    inflictor: {fileID: 0}
+  RunningPunch:
+    animTrigger: RunningPunch
+    damage: 3
+    duration: 0.6
+    comboResetTime: 0
+    forwardForce: 15
+    knockBackForce: 5
+    hitSFX: HeavyHit
+    knockDown: 1
+    slowMotionEffect: 1
+    DefenceOverride: 1
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1
+    collDistance: 0.55
+    collHeight: 0.82
+    hitTime: 7.3
+    inflictor: {fileID: 0}
+  RunningKick:
+    animTrigger: RunningKick
+    damage: 3
+    duration: 0.7
+    comboResetTime: 0
+    forwardForce: 15
+    knockBackForce: 5
+    hitSFX: HeavyHit
+    knockDown: 1
+    slowMotionEffect: 1
+    DefenceOverride: 1
+    isGroundAttack: 0
+    animationClip: {fileID: 0}
+    animationSpeed: 0
+    CollSize: 1
+    collDistance: 0.55
+    collHeight: 0.82
+    hitTime: 7.3
+    inflictor: {fileID: 0}
+  blockAttacksFromBehind: 0
+  comboContinueOnHit: 1
+  resetComboChainOnChangeCombo: 0
+  invulnerableDuringJump: 1
+  hitRecoveryTime: 0.4
+  hitThreshold: 0.2
+  hitKnockBackForce: 3
+  GroundAttackDistance: 1.4
+  knockdownHitCount: 3
+  KnockdownTimeout: 0
+  KnockdownUpForce: 5
+  KnockbackForce: 4
+  KnockdownStandUpTime: 0.8
+  knockdownVoiceSFX: PlayerKnockDownVoice
+  hitVoiceSFX: PlayerHit
+  deathVoiceSFX: 
+  defenceHitSFX: DefendHit
+  dropSFX: Drop
+  currentDirection: -1
+  itemInRange: {fileID: 0}
+  targetHit: 0
+--- !u!1001 &656166251283805329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6151768321977218292}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_Name
+      value: Villian
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 59e1705456475544db8f508702679c5b,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f21b05c218c1d684fbeb45aad84b001d, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59e1705456475544db8f508702679c5b, type: 3}
+--- !u!1 &421722543604615616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 59e1705456475544db8f508702679c5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 656166251283805329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1049781575306417018 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 59e1705456475544db8f508702679c5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 656166251283805329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9159841364745617130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8504309617613441659, guid: 59e1705456475544db8f508702679c5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 656166251283805329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8866913455012320191
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421722543604615616}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 59e1705456475544db8f508702679c5b, type: 3}
+  m_Controller: {fileID: 9100000, guid: f21b05c218c1d684fbeb45aad84b001d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7979614779810520413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421722543604615616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3823eadb584051942908677b03d951e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDirection: -1
+  DustEffectLand: {fileID: 115594, guid: 6c925d90c8ae6b148b428e7fe79c3f71, type: 3}
+  DustEffectJump: {fileID: 1350558754252556, guid: aa01e8fe85c4b55498cb17f0e85d5b2f,
+    type: 3}
+  HitEffect: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
+  DefendEffect: {fileID: 194486, guid: 103ca3ac1720c8445935db20b30e3305, type: 3}
+  animator: {fileID: 0}
