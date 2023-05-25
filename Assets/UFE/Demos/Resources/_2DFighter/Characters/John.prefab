@@ -2179,8 +2179,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4696055645807592}
-  - component: {fileID: 95324496746204870}
-  - component: {fileID: 114888891048337642}
   m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
@@ -2197,51 +2195,13 @@ Transform:
   m_GameObject: {fileID: 1363018927459058}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4917676145019236}
   - {fileID: 4368425269854844}
   m_Father: {fileID: 4221300857950164}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!95 &95324496746204870
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363018927459058}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 87886e989f329e84fbd053fbcaff4f6b, type: 3}
-  m_Controller: {fileID: 9100000, guid: ef2dba2535ecd4d4a8296f037cf9c748, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114888891048337642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363018927459058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3823eadb584051942908677b03d951e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDirection: -1
-  DustEffectLand: {fileID: 115594, guid: 6c925d90c8ae6b148b428e7fe79c3f71, type: 3}
-  DustEffectJump: {fileID: 1350558754252556, guid: aa01e8fe85c4b55498cb17f0e85d5b2f,
-    type: 3}
-  HitEffect: {fileID: 115594, guid: efd3011863918584d94591e177fa8d29, type: 3}
-  DefendEffect: {fileID: 194486, guid: 103ca3ac1720c8445935db20b30e3305, type: 3}
-  animator: {fileID: 95324496746204870}
 --- !u!1 &1368309174748584
 GameObject:
   m_ObjectHideFlags: 0
